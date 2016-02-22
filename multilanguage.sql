@@ -38,7 +38,7 @@ CREATE TABLE `contents` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content_type` varchar(100) NOT NULL,
   `parent_id` int(11) unsigned NOT NULL DEFAULT '0',
-  `featured_image` varchar(255) NOT NULL,
+  `featured_image` varchar(255) DEFAULT NULL,
   `order` int(4) unsigned NOT NULL,
   `published` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `published_at` datetime DEFAULT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `contents` (
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL,
   `created_by` int(11) NOT NULL,
-  `updated_by` int(11) NOT NULL,
+  `updated_by` int(11) DEFAULT NULL,
   `deleted_by` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
